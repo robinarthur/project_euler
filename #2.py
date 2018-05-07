@@ -7,9 +7,6 @@
 # four million, find the sum of the even-valued terms.
 #______________________________________________________________________________
 
-import numpy as np
-
-
 def fibo(a, b):
     a, b = b, a + b 
     return int(b)
