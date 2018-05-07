@@ -13,8 +13,6 @@ def fibo(a, b):
 
 fiblist = [0, 1]
 
-print(type(4*10**6))
-
 while True:
     fiblist.append(fibo(fiblist[-2], fiblist[-1]))
     
