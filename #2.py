@@ -10,18 +10,17 @@
 import numpy as np
 
 
-def fibo():
-    a, b = 0, 1
-    while True:
-        yield a
-        a, b = b, a + b 
-        return a, b
+def fibo(a, b):
+    a, b = b, a + b 
+    return int(b)
 
-l = []
+fiblist = [0, 1]
 
-while l.sum() < 4*10**6:
-	 l.append(fibo())
+print(type(4*10**6))
 
-
-print(sum([x for x in l if x % 2 == 0]))
-	
+while True:
+    fiblist.append(fibo(fiblist[-2], fiblist[-1]))
+    
+    if fiblist[-1] >= 4000000:
+        print(sum([x for x in fiblist if x % 2 == 0]))
+        break
