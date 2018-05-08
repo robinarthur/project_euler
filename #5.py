@@ -8,12 +8,12 @@
 
 div = [x for x in range(1,21)]
 
-start = 100000000
+start = 20
 step = 10000
 k, j = start, 0
 stop = 1000000000000
 
-for i in range(start, stop):
+for i in range(start, stop, div[-1]):
     l = []
     for e in div:
         l.append(i % e == 0 )
@@ -24,3 +24,4 @@ for i in range(start, stop):
     if all(item == True for item in l):
         print(l)
         print(i)
+        break
