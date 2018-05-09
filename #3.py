@@ -13,21 +13,20 @@ def is_prime(n):
         if n % i == 0: return False
     return True
 
-i = number = 600851475143
+number = 600851475143
 l = []
-k = 0
+k, i = 0, 0
 
-while l[-1] >= 0:
-    i -= 1
+while number > 1:
+    i += 1
     if is_prime(i):
-        l.append(i)
-        
-        # check if the prime is a factor of number
-        
-        
-    if i % 100000 == 0:
-        k += 100000
+        if number % i == 0:
+            l.append(i)
+            number = number / i
+            print("number", number)
+                
+    if i % 10 == 0:
+        k += 10
         print('checked: ', k)
-    
-print("yuhuu")
+        
 print(l[-1])
