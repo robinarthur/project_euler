@@ -23,7 +23,6 @@ while number > 1:
         if number % i == 0:
             l.append(i)
             number = number / i
-            print("number", number)
                 
     if i % 10 == 0:
         k += 10
