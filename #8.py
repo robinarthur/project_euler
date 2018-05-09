@@ -28,4 +28,48 @@
 #______________________________________________________________________________
 
 
-digit = # put the txt file here - #8.txt
+file = open("#8.txt", "r")
+
+digit = map(int, ''.join(line.rstrip() for line in file))
+
+
+print(digit)
+
+
+
+
+
+
+"""
+l = []
+result = []
+
+for i in range(len(digit)-13+1):
+    l.append(digit[i:i+13])
+
+numbers = []
+
+for n in l:
+    digits = []
+    for d in n:
+        digits.append(d)
+    numbers.append(digits)
+    
+print(numbers)
+print(digits)
+
+
+for number in l:
+    product = []
+    k = 1
+    for digit in number:
+        if digit.isdigit() and int(digit) > 0:
+            k *= int(digit)
+    
+        product.append(k)
+    result.append(product)
+
+m = max(result)
+print(m[-1])
+
+"""
