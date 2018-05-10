@@ -32,8 +32,9 @@ file = open("#8.txt", "r")
 
 digit = map(int, ''.join(line.rstrip() for line in file))
 
-
+print(len(digit))
 print(digit)
+
 
 
 
