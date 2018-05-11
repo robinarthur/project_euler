@@ -7,3 +7,16 @@
 #
 # Find the sum of the digits in the number 100!
 #______________________________________________________________________________
+
+n = 100
+result = 1
+sum = 0
+
+while n > 0:
+    result *= n
+    n -= 1
+    
+for i in str(result):
+    sum += int(i)
+
+print(sum)
