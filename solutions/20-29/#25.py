@@ -23,3 +23,18 @@
 # What is the index of the first term in the Fibonacci sequence to contain 1000
 # digits?
 #______________________________________________________________________________
+
+def fibo(a, b):
+    a, b = b, a + b 
+    return int(b)
+
+a,b = 1, 1
+i = 2
+
+while True:
+    i += 1
+    a, b = b, fibo(a, b)
+
+    if len(str(b)) == 1000:
+        print(i)
+        break
