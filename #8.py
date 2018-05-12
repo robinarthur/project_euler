@@ -30,24 +30,36 @@
 
 file = open("#8.txt", "r")
 
+digit = file.read()
+"""
 digit = map(int, ''.join(line.rstrip() for line in file))
 
 print(len(digit))
 print(digit)
-
-
-
-
-
-
-
 """
+
+
 l = []
 result = []
 
-for i in range(len(digit)-13+1):
-    l.append(digit[i:i+13])
+#for i in range(len(digit)-13+1):
+#    l.append(digit[i:i+13])
 
+for i in digit:
+    for j in list(i):
+        l.append(j)
+
+prod = 0
+print(l)
+
+for k in range(len(l)-12):
+    p = int(l[k])*int(l[k+1])*int(l[k+2])*int(l[k+3])*int(l[k+4])*int(l[k+5])*int(l[k+6])*int(l[k+7])*int(l[k+8])*int(l[k+9])*int(l[k+10])*int(l[k+11])*int(l[k+12])
+    if p > prod:
+        prod = p
+print(prod)
+
+
+"""
 numbers = []
 
 for n in l:
@@ -69,6 +81,17 @@ for number in l:
     
         product.append(k)
     result.append(product)
+
+y = []
+
+for x in result:
+    y.append(x[-1])
+
+print(y)
+
+print(max(y))
+print(sort(y))
+print("hier: 31109847552")
 
 m = max(result)
 print(m[-1])
