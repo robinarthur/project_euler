@@ -12,3 +12,20 @@
 # What is the total of all the name scores in the file?
 #______________________________________________________________________________
 
+
+
+
+file = open("#22.txt", "r")
+
+f = file.read()
+
+names = []
+
+names.append(''.join(i.rstrip(',') for i in f))
+
+s = str(names)
+
+names.append(s.split('"'))
+
+print(type(names))
+print(names)
