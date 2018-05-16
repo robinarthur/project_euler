@@ -12,12 +12,12 @@
 # What is the total of all the name scores in the file?
 #______________________________________________________________________________
 
-
-#import nltk
-#nltk.download()
-
-from tokenize import tokenize
-
+def char_score(word):
+    for i in word:
+        
+    
+    
+    
 file = open("#22.txt", "r")
 
 f = file.read()
@@ -29,20 +29,5 @@ text = text.split(',')
 print(text)
 
 for i in text:
-    print(i
+    print(i)
 
-
-"""
-names.append(''.join(i.rstrip(',') for i in f))
-
-text = str(names).replace('"', ' ').replace("'",'')
-
-print(type(names))
-print(names)
-print(text)
-
-w_l = tokenize(text)
-
-print(w_l)
-
-"""
