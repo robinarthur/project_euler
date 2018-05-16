@@ -13,19 +13,36 @@
 #______________________________________________________________________________
 
 
+#import nltk
+#nltk.download()
 
+from tokenize import tokenize
 
 file = open("#22.txt", "r")
 
 f = file.read()
 
-names = []
+text = str(f).replace('"', '').replace(', ',' ')
 
+text = text.split(',')
+
+print(text)
+
+for i in text:
+    print(i
+
+
+"""
 names.append(''.join(i.rstrip(',') for i in f))
 
-s = str(names)
-
-names.append(s.split('"'))
+text = str(names).replace('"', ' ').replace("'",'')
 
 print(type(names))
 print(names)
+print(text)
+
+w_l = tokenize(text)
+
+print(w_l)
+
+"""
