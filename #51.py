@@ -14,6 +14,7 @@
 #______________________________________________________________________________
 
 import time
+import string
  
 start = time.time()
 
@@ -33,9 +34,17 @@ def is_prime(n):
     return True
 
 
-def check_number(n):
+def check_number(prime, n):
     result = []
-    for i in str(n):
+    
+    for digit in '0123456789':
+        x = int(string.replace(prime, n, digit))
+        
+        
+        
+        
+        
+    for i in str(prime):
         for x in range(10):
             
             return result
