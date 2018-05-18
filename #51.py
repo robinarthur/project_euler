@@ -13,15 +13,54 @@
 # prime value family.
 #______________________________________________________________________________
 
+import time
+ 
+start = time.time()
+
 def is_prime(n):
-    if n <= 1: return False
-    if n == 2 or n == 3: return True # filter out number 2 and 3
-    if n % 2 == 0 or n < 2: return False
+    if n <= 1:
+        return False
+    if n == 2 or n == 3:
+        # filter out number 2 and 3
+        return True 
+    if n % 2 == 0 or n < 2:
+        return False
     
-    for i in range(3, int(n**0.5)+1,2): # only odd numbers
-        if n % i == 0: return False
+    # only odd numbers
+    for i in range(3, int(n**0.5)+1,2):
+        if n % i == 0:
+            return False
     return True
 
+
+def check_number(n):
+    result = []
+    for i in str(n):
+        for x in range(10):
+            
+            return result
+
+run = 0
+
+for i in range(1000000):
+    run += 1
+    if is_prime(i):
+        if bool(check_number(i)):
+            c = check_number(i)
+            if len(c) == 8:
+                print(i)
+                break
+    if i % 10 == 0:
+        print('Durchlauf: ', run)
+
+
+
+elapsed = (time.time() - start)
+ 
+print "time: %s seconds" % elapsed
+
+
+"""
 
 l = []
 k = 0
@@ -35,3 +74,5 @@ for i in range(10000000, 99999999, 1):
         print(k)
 
 print(len[l])
+
+"""
