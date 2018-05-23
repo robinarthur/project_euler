@@ -10,9 +10,10 @@
 
 import math
 
-x = [x for x in range(10, 10**9+1)
+x = [x for x in range(10, 10**9 - 1)
      if (math.log10(x) / math.log10(len(str(x)))) % 1 == 0]
 print(x)
+print(len(x))
 
 # 16807 = x^5  5=len
 
