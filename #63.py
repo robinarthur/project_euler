@@ -13,7 +13,7 @@ import math
 #    if isinstance(ln(number) / ln(l), int):
 #        return True
 
-x = [x for x in range(10,999999) if (math.log(x) / math.log(len(str(x)))) % 1 == 0]
+x = [x for x in range(10,10**9+1) if (math.log10(x) / math.log10(len(str(x)))) % 1 == 0]
 print(x)
 
     
@@ -29,5 +29,3 @@ print(x)
 # ln(16807) = x * ln(len)
 
 # ln(16807 / ln(len) = x
-
-# if isistance(x, int) return 
