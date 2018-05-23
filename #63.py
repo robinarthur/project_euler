@@ -8,15 +8,13 @@
 
 import math
 
-def is_power(number):
-    l = len(number)
-    if isinstance(ln(number) / ln(l), int):
-        return True
+#def is_power(number):
+#    l = len(number)
+#    if isinstance(ln(number) / ln(l), int):
+#        return True
 
-
-
-
-
+x = [x for x in range(10,999999) if (math.log(x) / math.log(len(str(x)))) % 1 == 0]
+print(x)
 
     
 #  print(math.exp(exponent*math.log(base))) 
